@@ -17,4 +17,10 @@ export class TasksComponent {
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
+
+  addTask(task: Task) {
+    console.log(task);
+
+    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
+  }
 }
