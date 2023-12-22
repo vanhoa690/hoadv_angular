@@ -14,7 +14,7 @@ import { LoginComponent } from './pages/login/login.component';
 // import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 // import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-// import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 // import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 // import { ProductsComponent } from './pages/admin/products/products.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
@@ -45,7 +45,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
     // BrowserAnimationsModule,
     // MatSlideToggleModule,
     FormsModule,
-    // HttpClientModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
