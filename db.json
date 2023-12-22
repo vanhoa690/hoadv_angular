@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 200,
+      "desc": "mo ta"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 200,
+      "desc": "mo ta"
+    },
+    {
+      "id": 3,
+      "name": "sfsfdf",
+      "price": 2020,
+      "desc": "dsdsd"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234567"
+    }
+  ]
+}
