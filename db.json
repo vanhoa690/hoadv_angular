@@ -2,15 +2,21 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
-      "price": 200,
+      "name": "Product 2",
+      "price": 1,
       "desc": "mo ta"
     },
     {
-      "name": "2123",
+      "name": "1",
       "desc": "123",
-      "price": 123,
+      "price": 2,
       "id": 2
+    },
+    {
+      "name": "2",
+      "desc": "",
+      "price": 0,
+      "id": 3
     }
   ],
   "users": [

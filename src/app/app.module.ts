@@ -15,6 +15,7 @@ import { ProductsComponent } from './pages/admin/products/products.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
+import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreateProductComponent } from './pages/admin/create-product/create-prod
     LayoutAdminComponent,
     LayoutClientComponent,
     CreateProductComponent,
+    EditProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

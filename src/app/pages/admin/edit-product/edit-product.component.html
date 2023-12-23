@@ -1,0 +1,37 @@
+<h2>Edit Product {{product.name}}</h2>
+<form (ngSubmit)="handleSubmitForm()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      [(ngModel)]="product.name"
+      type="text"
+      id="name"
+      class="form-control"
+      name="name"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input
+      [(ngModel)]="product.price"
+      type="number"
+      id="price"
+      class="form-control"
+      name="price"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Description:</label>
+    <input
+      [(ngModel)]="product.desc"
+      type="string"
+      id="desc"
+      class="form-control"
+      name="desc"
+    />
+  </div>
+
+  <button class="btn btn-primary">Save</button>
+</form>
