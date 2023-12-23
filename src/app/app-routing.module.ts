@@ -5,7 +5,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
 // import { AboutComponent } from './pages/about/about.component';
 // import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
 // import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-// import { ProductsComponent } from './pages/admin/products/products.component';
+import { ProductsComponent } from './pages/admin/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 // import { NotfoundComponent } from './pages/notfound/notfound.component';
@@ -21,7 +21,7 @@ const routes: Routes = [
       //   { path: 'about', component: AboutComponent },
       { path: 'login', component: LoginComponent },
       //   { path: 'register', component: RegisterComponent },
-        { path: 'product/:id', component: ProductDetailComponent },
+      { path: 'product/:id', component: ProductDetailComponent },
     ],
   },
   {
@@ -29,8 +29,7 @@ const routes: Routes = [
     component: LayoutAdminComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      //   { path: 'dashboard', component: DashboardComponent },
-      //   { path: 'products', component: ProductsComponent },
+      { path: 'products', component: ProductsComponent },
       //   { path: 'create-product', component: CreateProductComponent },
     ],
   },

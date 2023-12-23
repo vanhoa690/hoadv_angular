@@ -15,8 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-// import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-// import { ProductsComponent } from './pages/admin/products/products.component';
+import { ProductsComponent } from './pages/admin/products/products.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 // import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
@@ -33,8 +32,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
     LoginComponent,
     // RegisterComponent,
     ProductDetailComponent,
-    // DashboardComponent,
-    // ProductsComponent,
+    ProductsComponent,
     LayoutAdminComponent,
     LayoutClientComponent,
     // CreateProductComponent,

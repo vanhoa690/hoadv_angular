@@ -16,9 +16,12 @@ export class ProductService {
   }
 
   getProductDetail(productId: number): Observable<Product> {
-    console.log(productId);
-    
     const url = `${this.apiUrl}/${productId}`;
     return this.http.get<Product>(url);
+  }
+
+  deleteProduct(productId: number): Observable<Product> {
+    const url = `${this.apiUrl}/${productId}`;
+    return this.http.delete<Product>(url);
   }
 }

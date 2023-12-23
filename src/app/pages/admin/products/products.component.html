@@ -1,0 +1,23 @@
+<h2>Product List</h2>
+<a routerLink="/admin/create-product" class="btn btn-primary">Create Product</a>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+        <button (click)="deleteProductById(product.id)">Delete</button>
+        <button>Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
