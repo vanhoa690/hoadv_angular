@@ -5,7 +5,7 @@
       <h3>{{ product.name }}</h3>
       <p>Giá: {{ product.price }}</p>
       <p>Mô tả: {{ product.desc }}</p>
-      <button>View Details</button>
+      <a [routerLink]="['/product', product.id]">View Details</a>
     </li>
   </ul>
 </div>

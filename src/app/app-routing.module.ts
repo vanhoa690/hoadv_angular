@@ -9,7 +9,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 // import { NotfoundComponent } from './pages/notfound/notfound.component';
-// import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 // import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
@@ -21,7 +21,7 @@ const routes: Routes = [
       //   { path: 'about', component: AboutComponent },
       { path: 'login', component: LoginComponent },
       //   { path: 'register', component: RegisterComponent },
-      //   { path: 'product/:id', component: ProductDetailComponent },
+        { path: 'product/:id', component: ProductDetailComponent },
     ],
   },
   {

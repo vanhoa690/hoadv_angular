@@ -13,7 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
-// import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 // import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 // import { ProductsComponent } from './pages/admin/products/products.component';
@@ -32,7 +32,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
     FooterComponent,
     LoginComponent,
     // RegisterComponent,
-    // ProductDetailComponent,
+    ProductDetailComponent,
     // DashboardComponent,
     // ProductsComponent,
     LayoutAdminComponent,
