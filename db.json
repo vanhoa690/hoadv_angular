@@ -5,6 +5,12 @@
       "name": "Product 1",
       "price": 200,
       "desc": "mo ta"
+    },
+    {
+      "name": "2123",
+      "desc": "123",
+      "price": 123,
+      "id": 2
     }
   ],
   "users": [

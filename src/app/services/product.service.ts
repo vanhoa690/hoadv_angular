@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../types/Product';
+import { CreateProductForm, Product } from '../types/Product';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,5 +23,14 @@ export class ProductService {
   deleteProduct(productId: number): Observable<Product> {
     const url = `${this.apiUrl}/${productId}`;
     return this.http.delete<Product>(url);
+  }
+
+  createProduct(product: CreateProductForm): Observable<Product> {
+    return this.http.post<Product>(this.apiUrl, product);
+  }
+
+  updateProduct(productId: number, product: Product): Observable<Product> {
+    const url = `${this.apiUrl}/${productId}`;
+    return this.http.put<Product>(url, product);
   }
 }

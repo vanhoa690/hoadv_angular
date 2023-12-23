@@ -21,12 +21,17 @@ export class ProductsComponent {
   }
 
   deleteProductById(productId: number) {
-    console.log(productId);
     this.productService
       .deleteProduct(productId)
       .subscribe(
         () =>
-          (this.products = this.products.filter((product) => product.id !== productId))
+          (this.products = this.products.filter(
+            (product) => product.id !== productId
+          ))
       );
+  }
+
+  updateProductById(productId: number, product: Product) {
+    this.productService.updateProduct(productId, product).subscribe();
   }
 }
