@@ -16,4 +16,8 @@ export class ProductService {
   getProductDetail(id: number) {
     return this.http.get<Product>('https://fakestoreapi.com/products/' + id);
   }
+
+  removeProduct(id: number) {
+    return this.http.delete<Product>('https://fakestoreapi.com/products/' + id);
+  }
 }
