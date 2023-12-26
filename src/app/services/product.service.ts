@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../types/Product';
+import { Product, CreateProductForm } from '../types/Product';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +19,12 @@ export class ProductService {
 
   removeProduct(id: number) {
     return this.http.delete<Product>('https://fakestoreapi.com/products/' + id);
+  }
+
+  createProduct(product: CreateProductForm) {
+    return this.http.post<Product>(
+      'https://fakestoreapi.com/products/',
+      product
+    );
   }
 }
