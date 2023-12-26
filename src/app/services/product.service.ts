@@ -27,4 +27,11 @@ export class ProductService {
       product
     );
   }
+
+  updateProduct(productId: number, product: CreateProductForm) {
+    return this.http.put<Product>(
+      'https://fakestoreapi.com/products/' + productId,
+      product
+    );
+  }
 }

@@ -3,6 +3,7 @@ import { LayoutDefaultComponent } from './layouts/layout-default/layout-default.
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
 import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
+import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -24,7 +25,7 @@ export const routes: Routes = [
     children: [
       { path: 'products', component: ProductsComponent },
       { path: 'product/create', component: CreateProductComponent },
-      { path: 'product/:id', component: ProductDetailComponent },
+      { path: 'product/:id', component: EditProductComponent },
     ],
   },
   {
