@@ -1,7 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { Product } from '../../types/Product';
 import { ProductService } from '../../services/product.service';
@@ -9,7 +7,7 @@ import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ProductCardComponent, NgFor],
+  imports: [ProductCardComponent, NgFor],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
