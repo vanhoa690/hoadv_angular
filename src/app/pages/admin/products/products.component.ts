@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { Product } from '../../../types/Product';
+import { ApiProduct } from '../../../types/Product';
 import { ProductService } from '../../../services/product.service';
 
 @Component({
@@ -13,23 +13,23 @@ import { ProductService } from '../../../services/product.service';
   styleUrl: './products.component.css',
 })
 export class ProductsComponent {
-  products: Product[] = [];
+  products: ApiProduct[] = [];
   productService = inject(ProductService);
 
   ngOnInit(): void {
     this.productService
-      .getProductList()
+      .getAdminProductList()
       .subscribe((products) => (this.products = products));
   }
 
-  deleteProduct(id: number): void {
+  deleteProduct(id: string): void {
     if (window.confirm('Do you really remove product?')) {
       this.productService
         .removeProduct(id)
         .subscribe(
           () =>
             (this.products = this.products.filter(
-              (product) => product.id !== id
+              (product) => product._id !== id
             ))
         );
     }

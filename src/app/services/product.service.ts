@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product, CreateProductForm } from '../types/Product';
+import { Product, CreateProductForm, ApiProduct } from '../types/Product';
 
 const options = {
   headers: {
@@ -22,23 +22,27 @@ export class ProductService {
   }
 
   getAdminProductList() {
-    return this.http.get<Product[]>(
-      'https://hoadv-nodejs.vercel.app/products',
+    return this.http.get<ApiProduct[]>(
+      'https://hoadv-nodejs.vercel.app/api/products',
       options
     );
   }
 
   getProductDetail(id: number) {
-    return this.http.get<Product>('https://fakestoreapi.com/products/' + id);
+    return this.http.get<Product>(
+      'https://fakestoreapi.com/products/' + id
+    );
   }
 
-  removeProduct(id: number) {
-    return this.http.delete<Product>('https://fakestoreapi.com/products/' + id);
+  removeProduct(id: string) {
+    return this.http.delete<ApiProduct>(
+      'https://hoadv-nodejs.vercel.app/api/products/' + id
+    );
   }
 
   createProduct(product: CreateProductForm) {
     return this.http.post<Product>(
-      'https://fakestoreapi.com/products/',
+      'https://hoadv-nodejs.vercel.app/api/products/',
       product
     );
   }

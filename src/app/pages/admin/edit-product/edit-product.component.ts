@@ -20,6 +20,7 @@ export class EditProductComponent {
     image: '',
     category: '',
     price: 0,
+    rate: 0,
   };
 
   productService = inject(ProductService);
@@ -38,7 +39,9 @@ export class EditProductComponent {
     if (!this.productId) return;
     return this.productService
       .getProductDetail(this.productId)
-      .subscribe((product) => (this.product = product));
+      .subscribe(
+        (product) => (this.product = { ...product, rate: product.rating.rate })
+      );
   }
 
   handleSubmitForm() {

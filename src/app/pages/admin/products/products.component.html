@@ -35,18 +35,18 @@
         >
           {{ product.title }}
         </th>
-        <td class="px-6 py-4">{{ product.category }}</td>
-        <td class="px-6 py-4">{{ product.rating.rate }}</td>
+        <td class="px-6 py-4">{{ product.category.title }}</td>
+        <td class="px-6 py-4">{{ product.rate }}</td>
         <td class="px-6 py-4">${{ product.price }}</td>
         <td class="px-6 py-4">
           <div class="flex gap-3">
             <a
-              [routerLink]="['/admin/product', product.id]"
+              [routerLink]="['/admin/product', product._id]"
               class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
               >Edit</a
             >
             <a
-              (click)="deleteProduct(product.id)"
+              (click)="deleteProduct(product._id)"
               class="cursor-pointer font-medium text-red-600 dark:text-red-500"
               >Remove</a
             >

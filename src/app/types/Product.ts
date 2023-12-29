@@ -1,3 +1,5 @@
+import { Category } from './Category';
+
 export type Product = {
   id: number;
   title: string;
@@ -11,4 +13,12 @@ export type Product = {
   };
 };
 
-export type CreateProductForm = Omit<Product, 'id' | 'rating'>;
+export type CreateProductForm = Omit<Product, 'id' | 'rating'> & {
+  rate: number;
+};
+
+export type ApiProduct = Omit<Product, 'id' | 'rating'> & {
+  _id: string;
+  category: Category;
+  rate: number;
+};
