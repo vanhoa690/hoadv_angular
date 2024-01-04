@@ -4,7 +4,10 @@
     Product List
   </h1>
   <div class="flex flex-wrap justify-center gap-6">
-    <app-product-card *ngFor="let product of productList" />
+    <app-product-card
+      *ngFor="let productParent of productList"
+      [productChild]="productParent"
+    />
   </div>
 </main>
 <app-footer />
