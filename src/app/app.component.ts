@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,
+    NgFor,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -21,4 +23,30 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 export class AppComponent {
   title = 'Xin chao cac ban K6 Angular';
   myName = 'Hoadv';
+  productList = [
+    {
+      id: 1,
+      title: 'Product 1',
+    },
+    {
+      id: 1,
+      title: 'Product 1',
+    },
+    {
+      id: 1,
+      title: 'Product 1',
+    },
+    {
+      id: 1,
+      title: 'Product 1',
+    },
+    {
+      id: 1,
+      title: 'Product 1',
+    },
+    {
+      id: 1,
+      title: 'Product 1',
+    },
+  ];
 }
