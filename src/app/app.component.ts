@@ -21,8 +21,6 @@ import { NgFor } from '@angular/common';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Xin chao cac ban K6 Angular';
-  myName = 'Hoadv';
   productList = [
     {
       id: 1,
