@@ -1,5 +1,7 @@
 import { Injectable, inject } from '@angular/core'; // inject
 import { HttpClient } from '@angular/common/http'; // HttpClient
+import { Product } from '../types/Product';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +12,7 @@ export class ProductService {
   http = inject(HttpClient); // inject bien http
   constructor() {}
 
-  getProductList() {
-    return this.http.get(this.apiUrl); //axios.get(apiUrl)
+  getProductList(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl); //axios.get(apiUrl)
   }
 }
