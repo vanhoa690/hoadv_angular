@@ -1,4 +1,4 @@
-<!-- <app-header />
+<app-header />
 <main class="container mx-auto">
   <h1 class="pb-4 text-center text-4xl font-extrabold dark:text-white">
     Product List
@@ -8,8 +8,13 @@
       *ngFor="let productParent of productList"
       [productChild]="productParent"
     />
+    <!-- <app-product-card [productChild]="productList[0]" />
+    <app-product-card [productChild]="productList[1]" />
+    <app-product-card [productChild]="productList[2]" />
+    <app-product-card [productChild]="productList[3]" />
+    <app-product-card [productChild]="productList[4]" /> -->
   </div>
 </main>
-<app-footer /> -->
+<app-footer />
 
 <router-outlet></router-outlet>
