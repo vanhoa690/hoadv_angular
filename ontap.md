@@ -65,3 +65,30 @@ ng g c [name] <br>
     .subscribe(data -> cb functions) // hứng data vào biến của mình <br>
 
   - Cấu hình app config: thêm trong provider: provideHttpClient()
+
+  ## DAY 4: Lab 2
+
+  - component sidebar: ng g c components/sidebar
+  - ng g c pages/admin/products
+  - ng g c layouts/layout-admin
+  - app.routes:
+    {
+    path: 'admin',
+    component: LayoutAdminComponent,
+    children: [
+      { path: 'products', component: ProductsComponent },
+      { path: 'add', component: ProductsComponent }
+      ],
+    },
+
+
+
+  - page admin/products: table render ProductList (edit, remove)
+  - Nut create product
+
+  - Update product service: getProductListAdmin()
+  - Call API render UI
+    - fakeapi ko có CRUD
+    - https://hoadv-nodejs.vercel.app/api/products (CRUD)
+    - Api Nodejs
+    - Api JSon Server
