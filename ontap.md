@@ -47,3 +47,21 @@ ng g c [name] <br>
 - [target]="expression": <br>
   the html: src (img), href (a): [src]= "imgSrc" <br>
   component cha => con: [productChild] = "productParent" <br>
+
+  ## Day 3: UI + Ghép API
+
+  - Call Api <br>
+  - Tạo folder services: <br>
+  - ng g s [name] <br>
+  - VD: ng g s services/product <br>
+    - http = inject(HttpClient) <br>
+    - Viết các function: <br>
+    - getProductList(): http.get(apiUrl); <br>
+  - Call API: page Home <br>
+  - inject(ProductService) <br>
+  - ngOnInit (chạy sau render UI) : function call api <br>
+  - VD: productService // service <br>
+    .getProductList() // function <br>
+    .subscribe(data -> cb functions) // hứng data vào biến của mình <br>
+
+  - Cấu hình app config: thêm trong provider: provideHttpClient()
