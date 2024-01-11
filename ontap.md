@@ -68,27 +68,27 @@ ng g c [name] <br>
 
   ## DAY 4: Lab 2
 
-  - component sidebar: ng g c components/sidebar
-  - ng g c pages/admin/products
-  - ng g c layouts/layout-admin
-  - app.routes:
+  - component sidebar: <br>
+  - ng g c components/sidebar <br>
+  - ng g c pages/admin/products <br>
+  - ng g c layouts/layout-admin <br>
+  - app.routes: <br>
     {
-    path: 'admin',
-    component: LayoutAdminComponent,
-    children: [
-      { path: 'products', component: ProductsComponent },
-      { path: 'add', component: ProductsComponent }
-      ],
-    },
+    path: 'admin',<br>
+    component: LayoutAdminComponent, <br> // sử dụng component Layout
+    children: [ <br> // gồm paths của con nằm trong layout
+    { path: 'products', component: ProductsComponent }, <br> // path + value = pathCha/pathCon -> admin/products
+    { path: 'products/add', component: ProductAddComponent }, <br> -> admin/products : Lab 3
+    { path: 'products/:id', component: ProductEditComponent } <br> -> admin/products/edit/:id : Lab 4
+    ],
+    }, <br>
 
+  - page admin/products: table render ProductList (edit, remove) <br>
+  - Nut create product <br>
 
-
-  - page admin/products: table render ProductList (edit, remove)
-  - Nut create product
-
-  - Update product service: getProductListAdmin()
-  - Call API render UI
-    - fakeapi ko có CRUD
-    - https://hoadv-nodejs.vercel.app/api/products (CRUD)
-    - Api Nodejs
-    - Api JSon Server
+  - Update product service: getProductListAdmin() <br>
+  - Call API render UI <br>
+    - fakeapi ko có CRUD <br>
+    - https://hoadv-nodejs.vercel.app/api/products (CRUD) <br>
+    - Api Nodejs <br> (Option 1)
+    - Api JSon Server <br> (Option 2)
