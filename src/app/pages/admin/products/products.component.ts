@@ -31,3 +31,4 @@ export class ProductsComponent {
 // 1. Viet service
 // 2. Update UI
 // 3. Handle trong component
+// 4. Show Notify

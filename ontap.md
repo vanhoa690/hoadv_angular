@@ -103,3 +103,6 @@ ng g c [name] <br>
     {{ product.description | description : 120 }}
   - Data binding:
   - Event: (target)="statement": target: click, statement là function truyền vào
+  - Lab 2: List + Delete + Notify
+  - Lab 3: Create Product + Validate + Notify
+  - Lab 4: Edit Product + Validate + Notify

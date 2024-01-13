@@ -10,6 +10,9 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    children: [{ path: 'products', component: ProductsComponent }],
+    children: [
+      { path: 'products', component: ProductsComponent },
+      { path: 'products', component: ProductsComponent }
+    ],
   },
 ];
