@@ -24,15 +24,23 @@
         >
           {{ product.title }}
         </th>
-        <td class="px-6 py-4">{{ product.description }}</td>
-        <td class="px-6 py-4">Laptop</td>
-        <td class="px-6 py-4">$2999</td>
+        <!-- truncateDescription(120) -->
+        <td class="px-6 py-4">{{ product.description | description : 120 }}</td>
+        <td class="px-6 py-4">{{ product.category.title }}</td>
+        <td class="px-6 py-4">${{ product.price }}</td>
         <td class="px-6 py-4">
           <a
             href="#"
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
             >Edit</a
           >
+          <!--Envent (target)="statement" (click)="deleteProduct(product.id)" -->
+          <button
+            (click)="handleDeleteProduct(product._id)"
+            class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          >
+            Remove
+          </button>
         </td>
       </tr>
     </tbody>

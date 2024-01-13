@@ -92,3 +92,14 @@ ng g c [name] <br>
     - https://hoadv-nodejs.vercel.app/api/products (CRUD) <br>
     - Api Nodejs <br> (Option 1)
     - Api JSon Server <br> (Option 2)
+
+  ## Day 5:
+
+  - Viết pipe để xử lý dữ liệu:
+  - ng g s [name]
+  - Cách dùng: import
+  - 120: tham số
+  - description là pipe gọi ra
+    {{ product.description | description : 120 }}
+  - Data binding:
+  - Event: (target)="statement": target: click, statement là function truyền vào

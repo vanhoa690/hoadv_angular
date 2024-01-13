@@ -21,4 +21,6 @@ export class ProductService {
   getProductListAdmin(): Observable<ProductAdmin[]> {
     return this.http.get<ProductAdmin[]>(this.apiAdminUrl); //axios.get(apiUrl)
   }
+
+  // delete ProductById(id): this.http.delete(apiAdminUrl + id)
 }
