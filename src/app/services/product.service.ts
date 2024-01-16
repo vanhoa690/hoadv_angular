@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core'; // inject
 import { HttpClient } from '@angular/common/http'; // HttpClient
-import { Product, ProductAdmin } from '../types/Product';
+import { Product, ProductAdmin, ProductAdd } from '../types/Product';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -22,5 +22,11 @@ export class ProductService {
     return this.http.get<ProductAdmin[]>(this.apiAdminUrl); //axios.get(apiUrl)
   }
 
-  // delete ProductById(id): this.http.delete(apiAdminUrl + id)
+  deleteProductById(id: string) {
+    return this.http.delete(`${this.apiAdminUrl}/${id}`);
+  }
+
+  createProduct(product: ProductAdd) {
+    return this.http.post<Product>(this.apiAdminUrl, product);
+  }
 }
