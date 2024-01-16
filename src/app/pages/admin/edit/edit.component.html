@@ -1,4 +1,4 @@
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Add Product</h3>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Edit  Product</h3>
 
 <form (ngSubmit)="handleSubmit()">
   <div class="grid gap-4 mb-4 sm:grid-cols-2">
@@ -11,7 +11,7 @@
       <!-- [(target)]="expression" -->
       <!-- [(ngModel)] -->
       <input
-        [(ngModel)]="productAdd.title"
+        [(ngModel)]="productEdit.title"
         type="text"
         name="title"
         id="title"
@@ -26,7 +26,7 @@
         >Image</label
       >
       <input
-        [(ngModel)]="productAdd.image"
+        [(ngModel)]="productEdit.image"
         type="text"
         name="image"
         id="image"
@@ -41,7 +41,7 @@
         >Price</label
       >
       <input
-        [(ngModel)]="productAdd.price"
+        [(ngModel)]="productEdit.price"
         type="number"
         name="price"
         id="price"
@@ -56,7 +56,7 @@
         >Rate</label
       >
       <input
-        [(ngModel)]="productAdd.rate"
+        [(ngModel)]="productEdit.rate"
         type="number"
         name="rate"
         id="rate"
@@ -86,7 +86,7 @@
         >Description</label
       >
       <textarea
-        [(ngModel)]="productAdd.description"
+        [(ngModel)]="productEdit.description"
         id="description"
         rows="4"
         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -111,6 +111,6 @@
         clip-rule="evenodd"
       ></path>
     </svg>
-    Create product
+    Update product
   </button>
 </form>

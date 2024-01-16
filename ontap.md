@@ -106,3 +106,12 @@ ng g c [name] <br>
   - Lab 2: List + Delete + Notify
   - Lab 3: Create Product + Validate + Notify
   - Lab 4: Edit Product + Validate + Notify
+  - ASM = (Lab 1 + Lab 2 + Lab 3 + Lab 4) /5 + Thuong : UI + SP + Deploy + Day Du (+ CRUD Category)
+
+## Day 6:
+
+- import FormsModule: sử dụng ngModel
+- Data binding: Two way
+- [(ngModel)]="statment" // biến
+- (ngSubmit)="handleSubmit()"
+- (click)="handleClick(...)"
