@@ -1,4 +1,6 @@
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Edit  Product</h3>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+  Edit Product
+</h3>
 
 <form (ngSubmit)="handleSubmit()">
   <div class="grid gap-4 mb-4 sm:grid-cols-2">
@@ -71,12 +73,15 @@
         >Category</label
       >
       <select
-        ngModel
+        [(ngModel)]="productEdit.category"
         name="category"
         id="category"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
       >
         <option value="" disabled>Select category</option>
+        <option *ngFor="let category of categoryList" [ngValue]="category._id">
+          {{ category.title }}
+        </option>
       </select>
     </div>
     <div class="sm:col-span-3">

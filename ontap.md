@@ -127,3 +127,10 @@ ng g c [name] <br>
   [ngValue]="category.\_id">
   {{ category.title }}
   </option>
+
+- Lam quiz 5-8; <br>
+- Lab 5 - Lab 6 <br>
+- create page Login - Register (UI) <br>
+- Viết service Auth: lưu token (local storage, session, cookie) <br>
+- Ghép API: validate, Notify <br>
+- Guard bảo vệ /admin (check local, cookie) <br>

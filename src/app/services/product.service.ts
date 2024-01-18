@@ -29,4 +29,12 @@ export class ProductService {
   createProduct(product: ProductAdd) {
     return this.http.post<Product>(this.apiAdminUrl, product);
   }
+
+  getDetailProductById(id: string) {
+    return this.http.get<ProductAdmin>(`${this.apiAdminUrl}/${id}`);
+  }
+
+  updateProductById(product: ProductAdd, id: string) {
+    return this.http.put<Product>(`${this.apiAdminUrl}/${id}`, product);
+  }
 }
