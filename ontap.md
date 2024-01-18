@@ -115,3 +115,15 @@ ng g c [name] <br>
 - [(ngModel)]="statment" // biến
 - (ngSubmit)="handleSubmit()"
 - (click)="handleClick(...)"
+
+## Day 7:
+
+- Delete Product: Gọi service delete sau đó filter id
+- Create Product: Gọi service create product là xong
+- Api Category: Viết service gọi category List
+- ngFor để list select: [ngValue] lấy dữ liệu mà mình select:
+  <option
+  \*ngFor="let category of categoryList"
+  [ngValue]="category.\_id">
+  {{ category.title }}
+  </option>

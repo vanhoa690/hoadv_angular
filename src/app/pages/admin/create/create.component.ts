@@ -17,6 +17,7 @@ export class CreateComponent {
   categoryService = inject(CategoryService); // inject vao bien
   productService = inject(ProductService); // inject vao bien
   router = inject(Router);
+  
   productAdd = {
     title: '',
     price: 0,
@@ -33,7 +34,6 @@ export class CreateComponent {
       .subscribe((categories) => (this.categoryList = categories)); // callApi.then(cb fuc)
   }
   handleSubmit() {
-    console.log(this.productAdd);
     this.productService
       .createProduct(this.productAdd)
       .subscribe(() => this.router.navigate(['/admin/products']));
