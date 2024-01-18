@@ -57,10 +57,15 @@ export class EditComponent {
 
   handleSubmit() {
     if (!this.productId) return;
-    console.log(this.productEdit);
     this.productService
       .updateProductById(this.productEdit, this.productId)
       .subscribe(() => this.router.navigate(['/admin/products']));
     // call service api POST products
   }
 }
+
+// B1: Tạo biến productId: Lưu trữ Id từ url
+// B2: Tạo biến productEdit: Lưu trữ dữ liệu nhập input  form
+// B3: Lấy id From Url qua route.param => gán lại vào productList
+// B4: Gọi service getProductDetail -> cập nhật data vào productEdit
+// B5: Submit form gọi service PUT update Product
