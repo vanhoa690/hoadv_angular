@@ -144,3 +144,12 @@ ng g c [name] <br>
   - Get URL: route.params => param['id'] <br>
   - Call API get Product Detail <br>
   - Submit Form <br>
+
+## Day 9:
+
+Create guard protect route admin
+
+- ng generate guard [name]
+- ng g g [name]
+- adminGuard return true || false
+- Config route: canActivate: [adminGuard],

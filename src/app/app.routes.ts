@@ -9,8 +9,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { adminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [
-  // route '/' = page Home
-  // path, component
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
