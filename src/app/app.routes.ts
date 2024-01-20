@@ -6,6 +6,7 @@ import { CreateComponent } from './pages/admin/create/create.component';
 import { EditComponent } from './pages/admin/edit/edit.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { adminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [
   // route '/' = page Home
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'admin',
+    canActivate: [adminGuard],
     component: AdminComponent,
     children: [
       { path: 'products', component: ProductsComponent },

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  apiUrl = '';
+  apiUrl = 'https://hoadv-nodejs.vercel.app/auth/res';
   constructor() {}
 
   // Register

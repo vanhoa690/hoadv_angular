@@ -134,3 +134,13 @@ ng g c [name] <br>
 - Viết service Auth: lưu token (local storage, session, cookie) <br>
 - Ghép API: validate, Notify <br>
 - Guard bảo vệ /admin (check local, cookie) <br>
+
+## Day 8:
+
+- Edit Product: <br>
+- ProductID URL: <br>
+  - path: 'products/edit/:id' :id <br>
+  - link a: [routerLink]="['/admin/products/edit', product._id]" <br>
+  - Get URL: route.params => param['id'] <br>
+  - Call API get Product Detail <br>
+  - Submit Form <br>
