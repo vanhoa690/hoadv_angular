@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { UserService } from '../../../../services/user.service';
 import { User } from '../../../../types/User';
 
@@ -14,15 +14,28 @@ import { User } from '../../../../types/User';
 export class ListComponent {
   userService = inject(UserService); // inject vao bien
 
+  searchText = '';
   userList: User[] = [];
+  route = inject(ActivatedRoute);
 
   ngOnInit(): void {
-    this.userService
-      .getUserListAdmin()
-      .subscribe((users) => (this.userList = users)); // callApi.then(cb fuc)
+    // Lay searchText From Url
+    this.route.queryParams.subscribe((params) => {
+      this.searchText = params['search'];
+      return this.userService
+        .getUserListAdmin(this.searchText)
+        .subscribe((res) => (this.userList = res.data));
+    });
   }
   handleDeleteUser(id: string) {
-    if (window.confirm('Do you really remove product?')) {
+    console.log(id);
+    if (window.confirm('Do you really remove user?')) {
+      this.userService
+        .deleteUser(id)
+        .subscribe(
+          () =>
+            (this.userList = this.userList.filter((user) => user._id !== id))
+        );
     }
   }
 }

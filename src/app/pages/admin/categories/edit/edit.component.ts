@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'app-category-edit',
   standalone: true,
   imports: [],
   templateUrl: './edit.component.html',
