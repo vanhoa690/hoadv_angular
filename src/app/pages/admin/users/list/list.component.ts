@@ -13,8 +13,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './list.component.css',
 })
 export class ListComponent {
+  LIMIT = 6;
   userService = inject(UserService); // inject vao bien
-  totalPage = 1;
+  totalPages: number[] = [];
   searchText = '';
   userList: User[] = [];
   route = inject(ActivatedRoute);
@@ -25,16 +26,15 @@ export class ListComponent {
     this.route.queryParams.subscribe((params) => {
       this.searchText = params['search'];
       return this.userService
-        .getUserListAdmin(this.searchText)
+        .getUserListAdmin(this.searchText, 1)
         .subscribe((res) => {
           this.userList = res.data;
-          this.totalPage = res.total;
+          this.totalPages = this.convertArrayNumber(res.total);
         });
     });
   }
 
   handleDeleteUser(id: string) {
-    console.log(id);
     if (window.confirm('Do you really remove user?')) {
       this.userService
         .deleteUser(id)
@@ -49,10 +49,25 @@ export class ListComponent {
     if (!this.searchText) return;
 
     return this.userService
-      .getUserListAdmin(this.searchText)
+      .getUserListAdmin(this.searchText, 1)
       .subscribe((res) => {
         this.userList = res.data;
-        this.totalPage = res.total;
+        this.totalPages = this.convertArrayNumber(res.total);
       });
+  }
+  handleChangePage(page: number) {
+    return this.userService
+      .getUserListAdmin(this.searchText, page)
+      .subscribe((res) => {
+        this.userList = res.data;
+        this.totalPages = this.convertArrayNumber(res.total);
+      });
+  }
+
+  convertArrayNumber(value: number) {
+    return Array.from(
+      { length: Math.ceil(value / this.LIMIT) },
+      (_, key) => key + 1
+    );
   }
 }
