@@ -46,8 +46,6 @@ export class ListComponent {
   }
 
   handleSearch() {
-    if (!this.searchText) return;
-
     return this.userService
       .getUserListAdmin(this.searchText, 1)
       .subscribe((res) => {
