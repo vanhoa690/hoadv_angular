@@ -153,3 +153,21 @@ Create guard protect route admin
 - ng g g [name]
 - adminGuard return true || false
 - Config route: canActivate: [adminGuard],
+
+- Yeu cau: /signup Lam 1 trang moi hoan toan
+- 1. UI: ng g c pages/sigup
+- Update route: truy cap url tren chorme
+- 2. app.routes.ts: {
+     path: 'signup',
+     components: SignupComponent
+     }
+- 3. Update UI: Tailwind css
+- 4. Logic - Angular
+     - Form: Input Form
+     - Submit Form: call API (function services)
+     - 4.1: Input Form: component.ts
+     - tao bien  luu tru input form: user = {name, email, password}
+     - ngModel= user.name
+     4.2 Viet serices: call api
+      tao file serive: ng g s services/signup
+      - call serive trong sumit

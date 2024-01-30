@@ -15,8 +15,13 @@ import { EditComponent as EditCategoryComponent } from './pages/admin/categories
 import { ListComponent as ListUserComponent } from './pages/admin/users/list/list.component';
 import { CreateComponent as CreateUserComponent } from './pages/admin/users/create/create.component';
 import { EditComponent as EditUserComponent } from './pages/admin/users/edit/edit.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 export const routes: Routes = [
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
